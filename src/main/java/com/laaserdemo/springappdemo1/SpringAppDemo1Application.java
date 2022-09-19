@@ -13,7 +13,7 @@ public class SpringAppDemo1Application {
 
     @GetMapping(value = "/message", produces = {})
     public String message (){
-        return "Das ist deine Spring Boot über Azure gehostet! Herzlichen Glückwunsch!";
+        return "Das ist Meine Spring Boot über Azure gehostet! Herzlichen Glückwunsch!";
     }
 
     public static void main(String[] args) {
