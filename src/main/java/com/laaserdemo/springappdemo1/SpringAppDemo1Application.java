@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("springdemo")
 public class SpringAppDemo1Application {
 
     @GetMapping(value = "/message", produces = {})
