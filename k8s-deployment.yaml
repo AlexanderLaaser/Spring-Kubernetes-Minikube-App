@@ -1,0 +1,20 @@
+apiVersion: apps/v1 #Api Server Version
+kind: Deployment #Art des Objekts
+metadata:
+  name: spring-boot-laaser #Name oder Label
+spec:
+  selector:
+      matchLabels:
+        app: spring-boot-laaser #Der Name ist wichtig!
+  replicas: 3 #Anzahl der Pods im Kubernetes Cluster
+  template:
+    metadata:
+      labels:
+        app: spring-boot-laaser
+    spec:
+      containers:
+        - name: spring-boot-laaser #Name des Containers
+          image: springboot-k8s-example:1.0 #Name des bestehenden Containers in lokalen Docker Repo
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080 #Port auf dem der Container im Kubernetes Cluster läuft

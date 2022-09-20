@@ -12,10 +12,12 @@ public class SpringAppDemo1Application {
 
     @GetMapping(value = "/message", produces = {})
     public String message (){
-        return "Das ist Meine Spring Boot über Azure gehostet! Herzlichen Glückwunsch!";
+        return "Das ist meine erste Spring Boot Anwendung ausgeführt in Containern!";
     }
 
     public static void main(String[] args) {
+
+        System.out.println("Hallo ich bin eine Jar!");
         SpringApplication.run(SpringAppDemo1Application.class, args);
     }
 }

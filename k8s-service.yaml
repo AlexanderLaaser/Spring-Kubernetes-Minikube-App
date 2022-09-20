@@ -1,0 +1,12 @@
+apiVersion: v1 #Api Server Version
+kind: Service #Art des Objekts
+metadata:
+  name: spring-boot-svc #Name oder Label
+spec:
+  selector:
+    app: spring-boot-laaser #Der Name ist wichtig!
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080 #Port auf dem der Service im Kubernetes Cluster läuft
+  type: NodePort #Frage?
