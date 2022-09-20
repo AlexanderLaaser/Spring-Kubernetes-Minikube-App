@@ -17,4 +17,4 @@ spec:
           image: springboot-k8s-example:1.0 #Name des bestehenden Containers in lokalen Docker Repo
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080 #Port auf dem der Container im Kubernetes Cluster läuft
+            - containerPort: 8080 #Porte auf dem der Container im Kubernetes Cluster läuft
